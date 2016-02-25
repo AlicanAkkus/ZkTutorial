@@ -1,0 +1,36 @@
+<window title="Person Search ZK Application" width="%100" border="normal" apply="com.wora.tutorial.person.controller.PersonSearchController">
+  	<hbox align="center">
+    	Keyword:
+   		 <textbox id="keywordBox" />
+   		 <button id="searchButton" label="Search" />
+	</hbox>
+	<listbox id="personListbox" height="160px" emptyMessage="No Person found in the result">
+	    <listhead>
+	        <listheader label="Name" />
+	        <listheader label="Surname" />
+	        <listheader label="Age"/>
+	        <listheader label="Gender" />
+	    </listhead>
+	    
+	    
+	    <template name="model">
+	        <listitem>
+	            <listcell label="${each.name}"></listcell>
+	            <listcell label="${each.surname}"></listcell>
+	            <listcell label="${each.age}"></listcell>
+	            <listcell label="${each.gender}"></listcell>
+	        </listitem>
+   		</template>
+	    
+	</listbox>
+	
+	<hbox style="margin-top:20px">
+		<image id="genderImage" width="250px" />
+	    <vbox>
+	        <label id="nameLabel" />
+	        <label id="surnameLabel" />
+	        <label id="ageLabel" />
+	        <label id="genderLabel"/>
+	    </vbox>
+	</hbox>
+</window>
